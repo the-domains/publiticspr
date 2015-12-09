@@ -2,14 +2,21 @@
     <channel>
         <title><![CDATA[PubliticsPR]]></title>
         <description><![CDATA[PubliticsPR]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://thegrid.ai/publiticspr/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Wed, 09 Dec 2015 15:37:50 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 09 Dec 2015 15:46:56 GMT</lastBuildDate>
+        <atom:link href="https://thegrid.ai/publiticspr/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Political Consulting & Strategy]]></title>
+            <description><![CDATA[<article><h1>Political Consulting & Strategy</h1><p>Strategic Communications</p></article>]]></description>
+            <link>https://thegrid.ai/publiticspr/political-consulting-and-strategy/index.html</link>
+            <guid isPermaLink="false">381ad98f-116f-49ce-8123-d9d4a52c05d8</guid>
+            <pubDate>Wed, 09 Dec 2015 15:46:37 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Public Affairs & Issues Management]]></title>
-            <description><![CDATA[<article><h1></h1><p>Selected Practice Areas</p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/d4887d7c-baea-420d-86df-a1a8af8e0d83.jpg"></article>]]></description>
-            <link>undefinedpublic-affairs-and-issues-management/index.html</link>
+            <description><![CDATA[<article><h1></h1><p>Selected Practice Areas</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/89031822e9061ca3e20074d543319498b96efe5f.jpg"></article>]]></description>
+            <link>https://thegrid.ai/publiticspr/public-affairs-and-issues-management/index.html</link>
             <guid isPermaLink="false">5d9ff0c1-66e6-437a-b32b-2eadd1850229</guid>
             <pubDate>Wed, 09 Dec 2015 15:37:38 GMT</pubDate>
         </item>
