@@ -4,8 +4,15 @@
         <description><![CDATA[PubliticsPR]]></description>
         <link>https://thegrid.ai/publiticspr/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Wed, 09 Dec 2015 17:13:18 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Dec 2015 17:54:37 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/publiticspr/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Clients]]></title>
+            <description><![CDATA[<article><h1>Clients</h1><p>Public Entities </p></article>]]></description>
+            <link>https://thegrid.ai/publiticspr/clients/index.html</link>
+            <guid isPermaLink="false">9946b968-b9fb-486b-9665-2ff2620e1856</guid>
+            <pubDate>Wed, 09 Dec 2015 17:54:06 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Creative]]></title>
             <description><![CDATA[<article><h1>Creative</h1><p>Art Meets Science.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/2fe5a48381ecb378457443cea570e985df024bcb.jpg"></article>]]></description>
