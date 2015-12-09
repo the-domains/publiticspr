@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[PubliticsPR]]></title>
+        <description><![CDATA[PubliticsPR]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Wed, 09 Dec 2015 15:37:50 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Public Affairs & Issues Management]]></title>
+            <description><![CDATA[<article><h1></h1><p>Selected Practice Areas</p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/d4887d7c-baea-420d-86df-a1a8af8e0d83.jpg"></article>]]></description>
+            <link>undefinedpublic-affairs-and-issues-management/index.html</link>
+            <guid isPermaLink="false">5d9ff0c1-66e6-437a-b32b-2eadd1850229</guid>
+            <pubDate>Wed, 09 Dec 2015 15:37:38 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
