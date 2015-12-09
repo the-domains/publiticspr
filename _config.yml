@@ -1,6 +1,6 @@
 name: PubliticsPR
 favicon: null
-layout_spectrum: 0.5
+layout_spectrum: 0.93163
 typography_spectrum: 0.99291
 cta:
   domain: null
@@ -21,7 +21,7 @@ color:
     - '#00ffff'
     - '#ffffff'
     - '#808080'
-  brandStrength: 0.7853270305786282
+  brandStrength: 0.1875
   lightness: 0.5
   saturation: 0.5
   rhythmicContrast: 0.75
