@@ -6,8 +6,8 @@ inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-09T17:13:16.018Z'
-dateModified: '2015-12-09T17:13:09.726Z'
+datePublished: '2015-12-09T17:55:23.361Z'
+dateModified: '2015-12-09T17:54:55.442Z'
 title: Digital Strategy
 author: []
 sourcePath: _posts/2015-12-09-digital-strategy.md
