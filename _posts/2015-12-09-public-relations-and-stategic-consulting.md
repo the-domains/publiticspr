@@ -6,25 +6,26 @@ inLanguage: null
 starred: false
 keywords: []
 description: 'We help brands and organizations tell their story. '
-datePublished: '2015-12-09T16:27:29.292Z'
-dateModified: '2015-12-09T16:25:54.814Z'
+datePublished: '2015-12-09T16:38:49.694Z'
+dateModified: '2015-12-09T16:38:15.464Z'
 title: Public Relations and Stategic Consulting
 author: []
+sourcePath: _posts/2015-12-09-public-relations-and-stategic-consulting.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2015-12-09-public-relations-and-stategic-consulting.md
-published: true
 url: public-relations-and-stategic-consulting/index.html
 _type: Article
 
 ---
 # ****Public Relations and Stategic Consulting****
+![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/5893c859-0603-4b53-8514-b00b3f49c321.jpg)
 
-****Selected Practice Areas****
+# ********************************Selected Practice Areas********************************
 
 * Emerging Technology
 * Startups & Entrepreneurs
