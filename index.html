@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>PubliticsPR</title><link href="rss.xml" title="PubliticsPR feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="6d8c9964-211c-4423-9f6d-fcb651b5d859"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>PubliticsPR</title><link href="rss.xml" title="PubliticsPR feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="b60f5518-4f9e-4889-8ff6-8fa5b753038c"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -468,6 +472,7 @@ ul {
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile{height: 0.164rem; width: 0.244rem; position: absolute; top: 0.204rem; left: 0.224rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
@@ -670,6 +675,7 @@ ul {
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(255, 255, 255); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -715,6 +721,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile{height: 0.164rem; width: 0.244rem; position: absolute; top: 0.254rem; left: 0.224rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
@@ -917,6 +924,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(255, 255, 255); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -957,9 +965,11 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.164rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.244rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:active { color: rgb(0, 0, 0); }
@@ -1160,6 +1170,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 7.684rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(242, 242, 242); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(9, 165, 165); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -1201,9 +1212,11 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.164rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.244rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:active { color: rgb(0, 0, 0); }
@@ -1404,6 +1417,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 11.524rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(242, 242, 242); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(9, 165, 165); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -1445,9 +1459,11 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.204rem; padding-top: 0.104rem; margin-top: 0.104rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:active { color: rgb(0, 0, 0); }
@@ -1648,6 +1664,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(242, 242, 242); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(9, 165, 165); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -1689,9 +1706,11 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.154rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.234rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.heading { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a { color: rgb(168, 170, 172); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing > .data.list a:hover { color: rgb(143, 145, 148); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav .group.listing { background-color: rgb(240, 243, 245); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a { color: rgb(0, 148, 203); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav a:active { color: rgb(0, 0, 0); }
@@ -1892,6 +1911,7 @@ display: none;
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline { color: rgb(0, 102, 102); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 105); }
+#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate .group.heading { background-color: rgb(242, 242, 242); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a { color: rgb(9, 165, 165); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:hover { color: rgb(0, 0, 0); }
 #u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate#u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate a:active { color: rgb(0, 0, 0); }
@@ -1916,7 +1936,7 @@ wbr.w1800{ display: block }
  #u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-desktop {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-5177d092-1b9b-4c67-9f4a-ad891a0e7880"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i first_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-3"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-4"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles w_texts w_separators layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-5"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-6"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(255, 255, 255, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks vertical line_padding_aside_inside text_width_full not_decorated group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted collapsed full panel stack heading_listing i first_panel last_panel heading listing w_decoration w_headline w_title w_short_headline w_short_title w_list w_data w_short_list w_short_data stack heading_listing" itemid="u-page-nav" itemtype="nav" diff_index="4" index="heading_listing" kind="stack" score="2.75" missed="0.25" tag="article" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav"><div kind="group" index="heading" class="group heading group heading" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading-t-headline"><a class="text-decoration" href="index.html" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading-t-headline-a">PubliticsPR</a></h1></div><div kind="group" index="listing" class="group listing group listing" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing"><ul kind="data" index="list" class="short short_list short_data data list vfld-leader vfld-trailer data list" specificity="0.25" itemprop="list" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list"><li><a href='public-affairs-and-issues-management/'>Public Affairs & Issues <wbr class="w480"></wbr>Management</a></li><li><a href='creative/'><wbr class="w480 w481"></wbr>Creative</a></li><li><a href='public-relations-and-stategic-consulting/'><wbr class="w480 w481"></wbr>Public Relations and <wbr class="w480"></wbr>Strategic Consulting</a></li></ul></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+}</style></head><body><div class="layout-system rust mobile" id="page-5177d092-1b9b-4c67-9f4a-ad891a0e7880"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i first_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-3"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-4"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles w_texts w_separators layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-5"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-3-l-one-6"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-mobile-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(255, 255, 255, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks vertical line_padding_aside_inside text_width_full not_decorated group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted collapsed full panel stack heading_listing i first_panel last_panel heading listing w_decoration w_headline w_title w_short_headline w_short_title w_list w_data w_short_list w_short_data stack heading_listing" itemid="u-page-nav" itemtype="nav" diff_index="4" index="heading_listing" kind="stack" score="2.75" missed="0.25" tag="article" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav"><div kind="group" index="heading" class="group heading group heading" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading-t-headline"><a class="text-decoration" href="index.html" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-heading-t-headline-a">PubliticsPR</a></h1></div><div kind="group" index="listing" class="group listing group listing" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing"><ul kind="data" index="list" class="short short_list short_data data list vfld-leader vfld-trailer data list" specificity="0.25" itemprop="list" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-g-listing-d-list"><li><a href='public-affairs-and-issues-management/'>Public Affairs & Issues <wbr class="w480"></wbr>Management</a></li><wbr class="w480"></wbr><wbr class="w481"></wbr><li><a href='creative/'>Creative</a></li><wbr class="w480"></wbr><wbr class="w481"></wbr><li><a href='public-relations-and-stategic-consulting/'>Public Relations and <wbr class="w480"></wbr>Strategic Consulting</a></li></ul></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg preserveAspectRatio="none" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-nav-d-icon-mobile-svg" width="72px" height="60px" viewBox="0 0 72 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     
     <title>Rectangle 1 + Rectangle 1 Copy + Rectangle 1 Copy 2</title>
@@ -1943,13 +1963,13 @@ display: none;
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-t-paragraph"><p><b data-grid-id="f92825f4-7c1f-4eed-864a-bac0886ec277">Public Entities </b></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>JA Strategies/City of <wbr class="w480"></wbr>Scranton</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>orough of Park Ridge</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>C</span>ity of East Orange</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>ayonne MUA</p><p><b data-grid-id="66aa442d-09f1-464f-adb9-5b3af8561aa0"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Tech & Brands</b></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>ccreditrust</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>P</span>hroogal</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>E</span>ducational Specialized <wbr class="w480 w960"></wbr>Associates </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>e</span>Brand Studios</p><p><b data-grid-id="98d7df3e-0efa-4244-b3a0-3bd210048d73"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Nonprofit</b></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>rish Network USA</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>onds of Courage</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>merican Littoral Society</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>L</span>aunchNJ</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>S</span>ave H20 NJ</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
+</div><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-t-paragraph"><p><b data-grid-id="f92825f4-7c1f-4eed-864a-bac0886ec277">Public Entities </b></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>JA Strategies/City of <wbr class="w480"></wbr>Scranton</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>orough of Park Ridge</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">C</span>ity of East Orange</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>ayonne MUA</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><b data-grid-id="66aa442d-09f1-464f-adb9-5b3af8561aa0">Tech & Brands</b></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>ccreditrust</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">P</span>hroogal</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">E</span>ducational Specialized <wbr class="w480 w960"></wbr>Associates </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">e</span>Brand Studios</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><b data-grid-id="98d7df3e-0efa-4244-b3a0-3bd210048d73">Nonprofit</b></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>rish Network USA</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>onds of Courage</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>merican Littoral Society</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">L</span>aunchNJ</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">S</span>ave H20 NJ</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-d-separator-mobile-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii first_stack graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_short_headline w_short_title stack graphical_heading" itemid="fc93b27f-454e-4b5d-a415-c236dea06ba1" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1"><div kind="group" index="graphical" class="group graphical group graphical" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="960" max-height="636" href="creative/" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical-m-cover"><picture id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0f57bf4724d8687ba20633eadd955bcf/insta_brannan.jpg?height=301&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=455, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/327e483bc0ccc605065abdd570c0b3ec/insta_brannan.jpg?height=602&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=910 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/60d7a362300a8aaa4c2d26f7339a3dde/insta_brannan.jpg?height=302&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=455, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6b3843393b87d9b4610318450eeaeecf/insta_brannan.jpg?height=604&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=910 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bb49a686adc43b237852a72199f09aaf/insta_brannan.jpg?height=161&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=244, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cb74de132e5bdc79e29cba7af0fad7f7/insta_brannan.jpg?height=322&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=488 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/43bc02fae615d463b2fc5c0896e3571a/insta_brannan.jpg?height=241&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=364, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4c9a662f5b4f5849dd20df4112f6e164/insta_brannan.jpg?height=482&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=728 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3f0dbaebfe2e40204edc62ea489cb331/insta_brannan.jpg?height=271&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=409, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cfe2062e0d1bae7ffd57f0a23bb39965/insta_brannan.jpg?height=542&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=818 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5fb44f3f30786dd1fee4c4fd6b6f78e8/insta_brannan.jpg?height=406&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=613, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11416f7256a16fa10a75ba85c22ad525/insta_brannan.jpg?height=636&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=960 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading-t-headline"><a class="text-decoration" href="creative/" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading-t-headline-a">Creative</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_headline w_title w_medium_headline w_medium_title stack graphical_heading" itemid="8d7a6a42-386f-41bc-b6c5-5240a1f57939" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939"><div kind="group" index="graphical" class="group graphical group graphical" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="3872" max-height="2590" href="public-relations-and-stategic-consulting/" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical-m-cover"><picture id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/75cf05b34344a99d4fd235ddf6065b7a/insta_brannan.jpg?height=301&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=450, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8a4af403ff9f888f419da58026935f27/insta_brannan.jpg?height=602&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=900 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/42f0b0e90b6d0503ca3fe08c93ee68ed/insta_brannan.jpg?height=302&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=451, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4d60b015ef173d490fd7974190952806/insta_brannan.jpg?height=604&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=902 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e809333529f03f8c394821934fee51f3/insta_brannan.jpg?height=161&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=241, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/edc30fd4fbb32b4d1ae1a1f5c1ebd07c/insta_brannan.jpg?height=322&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=482 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e5e0475d85688e844d4313a28e31bb13/insta_brannan.jpg?height=241&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=361, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/38a8a1dca91f40713df3b53e9c6897da/insta_brannan.jpg?height=482&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=722 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/355a5adc4999c74b7dc6994591bae724/insta_brannan.jpg?height=273&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=408, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/f7d6f9adedbb2dc1b5ce170e40bcb070/insta_brannan.jpg?height=546&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=816 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/77a5116877e27d9e0d62283f9509975d/insta_brannan.jpg?height=410&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=612, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c7b86916fcbe9656b066c993fa8530ec/insta_brannan.jpg?height=820&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=1224 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading-t-headline"><a class="text-decoration" href="public-relations-and-stategic-consulting/" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading-t-headline-a"><strong data-grid-id="53bd6298-ab91-4210-8a4a-9227170abc3d"><strong data-grid-id="2f45dfa6-5bc9-4156-a494-979d777fa853">Public <wbr class="w480 w960 w961 w1799"></wbr>Relations <wbr class="w960"></wbr>and <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Strategic <wbr class="w480 w960 w961 w1799"></wbr>Consulting</strong></strong></a></h1></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_short_headline w_short_title stack graphical_heading" itemid="435e5699-7e49-4218-9155-bd90df5f44ed" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-435e5699-7e49-4218-9155-bd90df5f44ed"><div kind="group" index="graphical" class="group graphical group graphical" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1024" max-height="683" href="digital-strategy/" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical-m-cover"><picture id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3977531ecca6577898feb1714477f7ff/insta_brannan.jpg?height=420&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=630, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9b7770ba8aded871bac9937baf03b6db/insta_brannan.jpg?height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1024 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cdfd287deb0012419933aa862c320063/insta_brannan.jpg?height=421&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=631, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9b7770ba8aded871bac9937baf03b6db/insta_brannan.jpg?height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1024 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a1ca212c3697525bbd5168e1201d2745/insta_brannan.jpg?height=225&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=337, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2a2f61da175d1a535ba17cc3ee4d4114/insta_brannan.jpg?height=450&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=674 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0241ceceb9ae5b2ce6b34ee1f4cdc31f/insta_brannan.jpg?height=337&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=505, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8643951c99e3a20c2f8f5de49d5cb53d/insta_brannan.jpg?height=674&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1010 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/f54b5024bc59f0d344aab396649cf967/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=273&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=409, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4dea02740213eda06e8eb3b170d74fc2/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=546&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=818 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6fb966cd118d3c19d5078dba5231b775/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=409&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=613, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4b195138adf38a8f33981d1001fb0aef/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=1024 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading-t-headline"><a class="text-decoration" href="digital-strategy/" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading-t-headline-a">Digital <wbr class="w480 w960"></wbr>Strategy</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack textual i w_headline w_title w_paragraph w_text w_list w_data w_decoration w_short_headline w_short_title w_medium_paragraph w_medium_text w_short_list w_short_data stack textual" itemid="381ad98f-116f-49ce-8123-d9d4a52c05d8" itemtype="article" diff_index="1" index="textual" kind="stack" score="4.35" missed="0.25" tag="article" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8"><div kind="group" index="textual" class="group textual group textual" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-headline"><a class="text-decoration" href="political-consulting-and-strategy/" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-headline-a"><strong data-grid-id="a603e8c9-b1d1-4074-8871-01ec6f5fb98d">Political <wbr class="w480 w960"></wbr>Consulting & <wbr class="w480 w481 w960 w961 w1799"></wbr>Strategy</strong></a></h1><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-paragraph"><p><strong>Strategic Communications</strong></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>C</span>rafting and delivering an <wbr class="w960"></wbr>effective message <wbr class="w961 w1799"></wbr>to <wbr class="w480"></wbr>the right <wbr class="w960 w1800"></wbr>audience is <wbr class="w481"></wbr>essential for <wbr class="w960"></wbr>getting <wbr class="w480 w961 w1799"></wbr>results. We&#x2019;ve helped <wbr class="w960 w1800"></wbr>clients tell their stories <wbr class="w480 w481 w960 w961 w1799"></wbr>through precise targeting <wbr class="w960"></wbr>and <wbr class="w1800"></wbr>tailored <wbr class="w961 w1799"></wbr>strategic <wbr class="w480"></wbr>advice.</p><p><strong><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Digital Strategy</strong></p></div><ul kind="data" index="list" class="short short_list short_data data list data list" specificity="0.25" itemprop="list" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-d-list"><li>Candidates & Committees</li><li><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>PACs & Independent <wbr class="w960"></wbr>Expenditures</li><li><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Ballot & Constitutional <wbr class="w960"></wbr>Measures</li></ul></div></article><article subject="stack" class="col-1 export-linebreaks line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full aspect_natural stack graphical_textual ii graphical textual w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_headline w_title w_paragraph w_text w_list w_data w_separator w_short_headline w_short_title w_medium_paragraph w_medium_text w_short_list w_short_data stack graphical_textual" itemid="5d9ff0c1-66e6-437a-b32b-2eadd1850229" itemtype="article" diff_index="10" index="graphical_textual" kind="stack" score="7.35" missed="0.25" tag="article" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229"><div kind="group" index="graphical" class="group graphical group graphical" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="5472" max-height="3649" href="public-affairs-and-issues-management/" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical-m-cover"><picture id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a6c036f6206b0821b10a3664420cd0b1/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=270&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=405, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/b75837069ae253cb691c0dea60495607/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=540&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=810 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d75bbdc048b916a7efeb2cceca56f54b/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=271&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=405, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/169adeebb6a5f597d1ae937a2c0cd147/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=542&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=810 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e89d3cbe3f8c82fc5a82215bd53b171e/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=145&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=216, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ebd5c463155b3b01899da06f77d76ed6/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=290&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=432 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2c4031462943810e6027023ba2e735a0/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=324, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/1fd4cfe472401abfbed705970add32d4/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=648 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0fb29762dcb79a414a68af447b8b526d/insta_brannan.jpg?height=283&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=424, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/dd46b52228f7bec15ebf88e818b90398/insta_brannan.jpg?height=566&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=848 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/01c9a7d98662461c4ccad35de6f2a275/insta_brannan.jpg?height=425&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=636, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/797579b0b91dfe077612e411d25ae791/insta_brannan.jpg?height=850&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=1272 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="textual" class="group textual group textual" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-headline"><a class="text-decoration" href="public-affairs-and-issues-management/" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-headline-a">Public Affairs <wbr class="w480 w960"></wbr>& <wbr class="w961 w1799"></wbr>Issues <wbr class="w480 w481 w960 w1800"></wbr>Management</a></h1><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-paragraph"><p><strong>Selected Practice <wbr class="w960"></wbr>Areas</strong></p><p><strong><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Services</strong></p><p><strong><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Strategic <wbr class="w960"></wbr>Communications</strong></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>C</span>rafting and delivering <wbr class="w960"></wbr>an effective <wbr class="w961 w1799"></wbr>message to <wbr class="w480 w960 w1800"></wbr>the right audience is <wbr class="w481 w960 w961 w1799"></wbr>essential for getting <wbr class="w960 w1800"></wbr>results. <wbr class="w480"></wbr>We&#x2019;ve <wbr class="w961 w1799"></wbr>helped <wbr class="w960"></wbr>clients tell their stories <wbr class="w960 w961 w1799 w1800"></wbr>through <wbr class="w480 w481"></wbr>precise <wbr class="w960"></wbr>targeting and <wbr class="w961 w1799"></wbr>tailored <wbr class="w960"></wbr>strategic <wbr class="w1800"></wbr>advice.</p><p><strong><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Digital Strategy</strong></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-desktop"><?xml version="1.0" encoding="utf-8"?>
+</div></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii first_stack graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_short_headline w_short_title stack graphical_heading" itemid="fc93b27f-454e-4b5d-a415-c236dea06ba1" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1"><div kind="group" index="graphical" class="group graphical group graphical" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="960" max-height="636" href="creative/" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical-m-cover"><picture id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0f57bf4724d8687ba20633eadd955bcf/insta_brannan.jpg?height=301&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=455, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/327e483bc0ccc605065abdd570c0b3ec/insta_brannan.jpg?height=602&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=910 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/60d7a362300a8aaa4c2d26f7339a3dde/insta_brannan.jpg?height=302&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=455, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6b3843393b87d9b4610318450eeaeecf/insta_brannan.jpg?height=604&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=910 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bb49a686adc43b237852a72199f09aaf/insta_brannan.jpg?height=161&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=244, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cb74de132e5bdc79e29cba7af0fad7f7/insta_brannan.jpg?height=322&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=488 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/43bc02fae615d463b2fc5c0896e3571a/insta_brannan.jpg?height=241&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=364, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4c9a662f5b4f5849dd20df4112f6e164/insta_brannan.jpg?height=482&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=728 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3f0dbaebfe2e40204edc62ea489cb331/insta_brannan.jpg?height=271&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=409, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cfe2062e0d1bae7ffd57f0a23bb39965/insta_brannan.jpg?height=542&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=818 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5fb44f3f30786dd1fee4c4fd6b6f78e8/insta_brannan.jpg?height=406&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=613, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11416f7256a16fa10a75ba85c22ad525/insta_brannan.jpg?height=636&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2fe5a48381ecb378457443cea570e985df024bcb.jpg&width=960 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading-t-headline"><a class="text-decoration" href="creative/" id="u-fc93b27f-454e-4b5d-a415-c236dea06ba1-g-heading-t-headline-a">Creative</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_headline w_title w_medium_headline w_medium_title stack graphical_heading" itemid="8d7a6a42-386f-41bc-b6c5-5240a1f57939" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939"><div kind="group" index="graphical" class="group graphical group graphical" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="3872" max-height="2590" href="public-relations-and-stategic-consulting/" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical-m-cover"><picture id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/75cf05b34344a99d4fd235ddf6065b7a/insta_brannan.jpg?height=301&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=450, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8a4af403ff9f888f419da58026935f27/insta_brannan.jpg?height=602&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=900 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/42f0b0e90b6d0503ca3fe08c93ee68ed/insta_brannan.jpg?height=302&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=451, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4d60b015ef173d490fd7974190952806/insta_brannan.jpg?height=604&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=902 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e809333529f03f8c394821934fee51f3/insta_brannan.jpg?height=161&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=241, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/edc30fd4fbb32b4d1ae1a1f5c1ebd07c/insta_brannan.jpg?height=322&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=482 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e5e0475d85688e844d4313a28e31bb13/insta_brannan.jpg?height=241&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=361, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/38a8a1dca91f40713df3b53e9c6897da/insta_brannan.jpg?height=482&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=722 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/355a5adc4999c74b7dc6994591bae724/insta_brannan.jpg?height=273&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=408, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/f7d6f9adedbb2dc1b5ce170e40bcb070/insta_brannan.jpg?height=546&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=816 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/77a5116877e27d9e0d62283f9509975d/insta_brannan.jpg?height=410&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=612, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c7b86916fcbe9656b066c993fa8530ec/insta_brannan.jpg?height=820&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F603751864abb7d21f43f12a5a8eabaab049822e5.jpg&width=1224 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading-t-headline"><a class="text-decoration" href="public-relations-and-stategic-consulting/" id="u-8d7a6a42-386f-41bc-b6c5-5240a1f57939-g-heading-t-headline-a"><strong data-grid-id="53bd6298-ab91-4210-8a4a-9227170abc3d"><strong data-grid-id="2f45dfa6-5bc9-4156-a494-979d777fa853">Public <wbr class="w480 w960 w961 w1799"></wbr>Relations <wbr class="w960"></wbr>and <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Strategic <wbr class="w480 w960 w961 w1799"></wbr>Consulting</strong></strong></a></h1></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full aspect_natural stack graphical_heading ii graphical heading w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_short_headline w_short_title stack graphical_heading" itemid="435e5699-7e49-4218-9155-bd90df5f44ed" itemtype="article" diff_index="9" index="graphical_heading" kind="stack" score="5.875" missed="0.125" tag="article" id="u-435e5699-7e49-4218-9155-bd90df5f44ed"><div kind="group" index="graphical" class="group graphical group graphical" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1024" max-height="683" href="digital-strategy/" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical-m-cover"><picture id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3977531ecca6577898feb1714477f7ff/insta_brannan.jpg?height=420&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=630, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9b7770ba8aded871bac9937baf03b6db/insta_brannan.jpg?height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1024 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/cdfd287deb0012419933aa862c320063/insta_brannan.jpg?height=421&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=631, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9b7770ba8aded871bac9937baf03b6db/insta_brannan.jpg?height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1024 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a1ca212c3697525bbd5168e1201d2745/insta_brannan.jpg?height=225&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=337, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2a2f61da175d1a535ba17cc3ee4d4114/insta_brannan.jpg?height=450&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=674 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0241ceceb9ae5b2ce6b34ee1f4cdc31f/insta_brannan.jpg?height=337&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=505, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8643951c99e3a20c2f8f5de49d5cb53d/insta_brannan.jpg?height=674&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&width=1010 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/f54b5024bc59f0d344aab396649cf967/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=273&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=409, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4dea02740213eda06e8eb3b170d74fc2/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=546&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=818 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6fb966cd118d3c19d5078dba5231b775/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=409&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=613, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4b195138adf38a8f33981d1001fb0aef/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=683&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F91bf03bc57c932831a663f8d51153a8a9d3e5ae1.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=1024 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="heading" class="group heading group heading" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading-t-headline"><a class="text-decoration" href="digital-strategy/" id="u-435e5699-7e49-4218-9155-bd90df5f44ed-g-heading-t-headline-a">Digital <wbr class="w480 w960"></wbr>Strategy</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack textual i w_headline w_title w_paragraph w_text w_list w_data w_decoration w_short_headline w_short_title w_medium_paragraph w_medium_text w_short_list w_short_data stack textual" itemid="381ad98f-116f-49ce-8123-d9d4a52c05d8" itemtype="article" diff_index="1" index="textual" kind="stack" score="4.35" missed="0.25" tag="article" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8"><div kind="group" index="textual" class="group textual group textual" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-headline"><a class="text-decoration" href="political-consulting-and-strategy/" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-headline-a"><strong data-grid-id="a603e8c9-b1d1-4074-8871-01ec6f5fb98d">Political <wbr class="w480 w960"></wbr>Consulting & <wbr class="w480 w481 w960 w961 w1799"></wbr>Strategy</strong></a></h1><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-t-paragraph"><p><strong>Strategic Communications</strong></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">C</span>rafting and delivering an <wbr class="w960"></wbr>effective message <wbr class="w961 w1799"></wbr>to <wbr class="w480"></wbr>the right <wbr class="w960 w1800"></wbr>audience is <wbr class="w481"></wbr>essential for <wbr class="w960"></wbr>getting <wbr class="w480 w961 w1799"></wbr>results. We&#x2019;ve helped <wbr class="w960 w1800"></wbr>clients tell their stories <wbr class="w480 w481 w960 w961 w1799"></wbr>through precise targeting <wbr class="w960"></wbr>and <wbr class="w1800"></wbr>tailored <wbr class="w961 w1799"></wbr>strategic <wbr class="w480"></wbr>advice.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><strong>Digital Strategy</strong></p></div><ul kind="data" index="list" class="short short_list short_data data list data list" specificity="0.25" itemprop="list" id="u-381ad98f-116f-49ce-8123-d9d4a52c05d8-g-textual-d-list"><li>Candidates & Committees</li><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><li>PACs & Independent <wbr class="w960"></wbr>Expenditures</li><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><li>Ballot & Constitutional <wbr class="w960"></wbr>Measures</li></ul></div></article><article subject="stack" class="col-1 export-linebreaks line_padding_aside_inside text_width_wider not_decorated group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full aspect_natural stack graphical_textual ii graphical textual w_cover w_media w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_headline w_title w_paragraph w_text w_list w_data w_separator w_short_headline w_short_title w_medium_paragraph w_medium_text w_short_list w_short_data stack graphical_textual" itemid="5d9ff0c1-66e6-437a-b32b-2eadd1850229" itemtype="article" diff_index="10" index="graphical_textual" kind="stack" score="7.35" missed="0.25" tag="article" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229"><div kind="group" index="graphical" class="group graphical group graphical" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="5472" max-height="3649" href="public-affairs-and-issues-management/" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical-m-cover"><picture id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a6c036f6206b0821b10a3664420cd0b1/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=270&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=405, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/b75837069ae253cb691c0dea60495607/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=540&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=810 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d75bbdc048b916a7efeb2cceca56f54b/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=271&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=405, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/169adeebb6a5f597d1ae937a2c0cd147/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=542&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=810 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e89d3cbe3f8c82fc5a82215bd53b171e/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=145&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=216, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ebd5c463155b3b01899da06f77d76ed6/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=290&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=432 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2c4031462943810e6027023ba2e735a0/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=324, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/1fd4cfe472401abfbed705970add32d4/gradientmap.jpg?color1=%231A1A1A&color2=%23333333&color3=%23666666&color4=%2366FFFF&color5=%23CCFFFF&height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=648 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0fb29762dcb79a414a68af447b8b526d/insta_brannan.jpg?height=283&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=424, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/dd46b52228f7bec15ebf88e818b90398/insta_brannan.jpg?height=566&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=848 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/01c9a7d98662461c4ccad35de6f2a275/insta_brannan.jpg?height=425&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=636, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/797579b0b91dfe077612e411d25ae791/insta_brannan.jpg?height=850&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F89031822e9061ca3e20074d543319498b96efe5f.jpg&width=1272 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div><div kind="group" index="textual" class="group textual group textual" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-headline"><a class="text-decoration" href="public-affairs-and-issues-management/" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-headline-a">Public Affairs <wbr class="w480 w960"></wbr>& <wbr class="w961 w1799"></wbr>Issues <wbr class="w480 w481 w960 w1800"></wbr>Management</a></h1><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-t-paragraph"><p><strong>Selected Practice <wbr class="w960"></wbr>Areas</strong></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><strong>Services</strong></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><strong>Strategic <wbr class="w960"></wbr>Communications</strong></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">C</span>rafting and delivering <wbr class="w960"></wbr>an effective <wbr class="w961 w1799"></wbr>message to <wbr class="w480 w960 w1800"></wbr>the right audience is <wbr class="w481 w960 w961 w1799"></wbr>essential for getting <wbr class="w960 w1800"></wbr>results. <wbr class="w480"></wbr>We&#x2019;ve <wbr class="w961 w1799"></wbr>helped <wbr class="w960"></wbr>clients tell their stories <wbr class="w960 w961 w1799 w1800"></wbr>through <wbr class="w480 w481"></wbr>precise <wbr class="w960"></wbr>targeting and <wbr class="w961 w1799"></wbr>tailored <wbr class="w960"></wbr>strategic <wbr class="w1800"></wbr>advice.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><strong>Digital Strategy</strong></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-desktop"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-desktop-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 90 612 612" enable-background="new 0 90 612 612" xml:space="preserve">
@@ -1965,7 +1985,7 @@ display: none;
 	l20.4,18.7l107.1-135.1L306,623.5l167.5-210l107.1,135.2l21.2-19.5L491.3,390.6L601.8,252z M306,577.5l-148.8-187L306,202.7
 	l148.8,187.8L306,577.5z"/>
 </svg>
-</div><ul kind="data" index="list" class="short short_list short_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-list"><li>Nonprofit & Trade <wbr class="w960"></wbr>Groups</li><li><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Coalitions & Advocacy <wbr class="w960 w961 w1799"></wbr>Organizations</li><li><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Public Entities, Public <wbr class="w960"></wbr>Finance & <wbr class="w961 w1799"></wbr>Economic <wbr class="w480 w960 w1800"></wbr>Development</li><li><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Corporate</li></ul><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-d-separator-mobile-svg"></use></svg></div></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack heading i last_stack w_headline w_title w_subtitle w_decoration w_short_headline w_short_title w_long_subtitle w_long_title stack heading" itemid="a4b84ce3-985c-4d79-867d-87db98c33ec6" itemtype="article" diff_index="0" index="heading" kind="stack" score="6" tag="article" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6"><div kind="group" index="heading" class="group heading group heading" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-headline"><span class="text-decoration" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-headline-span"><b data-grid-id="c4c779e8-c358-4003-b000-e6968fed6c36">What We Do</b></span></h1><h2 kind="title" index="subtitle" class="long long_subtitle long_title title subtitle vfld-trailer title subtitle" specificity="0.25" itemprop="subtitle" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-subtitle"><span class="text-decoration" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-subtitle-span"><h1>PubliticsPR+Digital is a <strong data-grid-id="29c2872a-0f05-40e9-9f64-ac915e1c15b0"><wbr class="w480 w960"></wbr>public <wbr class="w481"></wbr>affairs, <wbr class="w961 w1799"></wbr>public <wbr class="w480 w960 w1800"></wbr>relations, strategy <wbr class="w481"></wbr>and <wbr class="w480 w960"></wbr>creative <wbr class="w961 w1799"></wbr>consultancy <wbr class="w480 w960"></wbr>built <wbr class="w1800"></wbr>for <wbr class="w481"></wbr>the digital age. <strong data-grid-id="7b358d77-ac0f-4556-80b3-9f2d1e1f8f1f"><wbr class="w480 w960 w961 w1799"></wbr>We work with <wbr class="w481"></wbr>clients <wbr class="w480 w960"></wbr>across <wbr class="w961 w1799 w1800"></wbr>industries and <wbr class="w480 w481 w960"></wbr>sectors to tackle <wbr class="w480 w961 w1799"></wbr>complex <wbr class="w960 w1800"></wbr>strategic <wbr class="w481"></wbr>and <wbr class="w480 w960 w961 w1799"></wbr>communications <wbr class="w480 w960"></wbr>challenges </strong></strong>by <wbr class="w481 w961 w1799 w1800"></wbr>providing <wbr class="w480 w960"></wbr>insight-driven advice <wbr class="w480 w481 w960"></wbr>and <wbr class="w961 w1799"></wbr>strategies <wbr class="w1800"></wbr>that <wbr class="w480"></wbr>move <wbr class="w960"></wbr>opinion <wbr class="w481"></wbr>and win <wbr class="w480 w961 w1799"></wbr>the <wbr class="w960"></wbr>conversation. </h1><p></p><strong><p data-grid-id="65660657-e056-44e8-b21c-47a6b65eb09f"><strong></strong></p></strong></span></h2></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline"><a class="text-decoration" href="rss.xml" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline-a">PubliticsPR feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_medias w_titles layout two i first_layout feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-two"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_titles w_texts layout two i feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-two-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-one-2"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(192, 192, 192, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_medias w_titles layout two i first_layout feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-two"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_titles w_texts layout two i feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-two-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-one-2"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(192, 192, 192, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div><ul kind="data" index="list" class="short short_list short_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-list"><li>Nonprofit & Trade <wbr class="w960"></wbr>Groups</li><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><li>Coalitions & Advocacy <wbr class="w960 w961 w1799"></wbr>Organizations</li><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><li>Public Entities, Public <wbr class="w960"></wbr>Finance & <wbr class="w961 w1799"></wbr>Economic <wbr class="w480 w960 w1800"></wbr>Development</li><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><li>Corporate</li></ul><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-5d9ff0c1-66e6-437a-b32b-2eadd1850229-g-textual-d-separator-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-9946b968-b9fb-486b-9665-2ff2620e1856-g-textual-d-separator-mobile-svg"></use></svg></div></div></article><article subject="stack" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_high_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack heading i last_stack w_headline w_title w_subtitle w_decoration w_short_headline w_short_title w_long_subtitle w_long_title stack heading" itemid="a4b84ce3-985c-4d79-867d-87db98c33ec6" itemtype="article" diff_index="0" index="heading" kind="stack" score="6" tag="article" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6"><div kind="group" index="heading" class="group heading group heading" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-headline"><span class="text-decoration" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-headline-span"><b data-grid-id="c4c779e8-c358-4003-b000-e6968fed6c36">What We Do</b></span></h1><h2 kind="title" index="subtitle" class="long long_subtitle long_title title subtitle vfld-trailer title subtitle" specificity="0.25" itemprop="subtitle" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-subtitle"><span class="text-decoration" id="u-a4b84ce3-985c-4d79-867d-87db98c33ec6-g-heading-t-subtitle-span"><h1>PubliticsPR+Digital is a <wbr class="w480"></wbr><wbr class="w960"></wbr><strong data-grid-id="29c2872a-0f05-40e9-9f64-ac915e1c15b0">public <wbr class="w481"></wbr>affairs, <wbr class="w961 w1799"></wbr>public <wbr class="w480 w960 w1800"></wbr>relations, strategy <wbr class="w481"></wbr>and <wbr class="w480 w960"></wbr>creative <wbr class="w961 w1799"></wbr>consultancy <wbr class="w480 w960"></wbr>built <wbr class="w1800"></wbr>for <wbr class="w481"></wbr>the digital age. <wbr class="w480"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><strong data-grid-id="7b358d77-ac0f-4556-80b3-9f2d1e1f8f1f">We work with <wbr class="w481"></wbr>clients <wbr class="w480 w960"></wbr>across <wbr class="w961 w1799 w1800"></wbr>industries and <wbr class="w480 w481 w960"></wbr>sectors to tackle <wbr class="w480 w961 w1799"></wbr>complex <wbr class="w960 w1800"></wbr>strategic <wbr class="w481"></wbr>and <wbr class="w480 w960 w961 w1799"></wbr>communications <wbr class="w480 w960"></wbr>challenges </strong></strong>by <wbr class="w481 w961 w1799 w1800"></wbr>providing <wbr class="w480 w960"></wbr>insight-driven advice <wbr class="w480 w481 w960"></wbr>and <wbr class="w961 w1799"></wbr>strategies <wbr class="w1800"></wbr>that <wbr class="w480"></wbr>move <wbr class="w960"></wbr>opinion <wbr class="w481"></wbr>and win <wbr class="w480 w961 w1799"></wbr>the <wbr class="w960"></wbr>conversation. </h1><p></p><strong><p data-grid-id="65660657-e056-44e8-b21c-47a6b65eb09f"><strong></strong></p></strong></span></h2></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline"><a class="text-decoration" href="rss.xml" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-alternate-g-heading-t-headline-a">PubliticsPR feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_medias w_titles layout two i first_layout feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-two"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_titles w_texts layout two i feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-two-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-3-l-one-2"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-desktop-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(192, 192, 192, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_medium_paragraph w_medium_text layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts w_separators layout one i first_layout last_layout opener layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_cover w_media w_leader w_decoration w_trailer w_connector media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_headline w_title w_separator w_icon w_short_headline w_short_title media_gte_full w_medium_headline w_medium_title w_paragraph w_text w_list w_data w_medium_paragraph w_medium_text w_short_list w_short_data w_subtitle w_long_subtitle w_long_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_medias w_titles layout two i first_layout feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-two"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_medias w_titles layout one i feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-one"></div><div kind="layout" style="position: relative" sequence="two" diff_index="1" index="two" class="colors-use-local w_titles w_texts layout two i feed layout two" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-two-2"></div><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i last_layout feed layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-3-l-one-2"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-4"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-cinema-l-one-4-l-one"></div><style id="u-5177d092-1b9b-4c67-9f4a-ad891a0e7880-color">body{background-color: rgba(192, 192, 192, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -2369,7 +2389,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -2396,40 +2416,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -2438,19 +2487,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -2598,11 +2635,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -2611,6 +2650,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -2623,79 +2664,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2719,29 +2975,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2760,14 +3019,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2782,7 +3041,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
